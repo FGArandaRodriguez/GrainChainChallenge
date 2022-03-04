@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}Grain Chain Juego-Focos{% endblock %}
+
+{% block head %}
+  {{ super() }}
+  <style>
+    input[type=submit], input[type=file] {
+      margin-top: 80px;
+      border-radius: 4px;
+      background-color: #e6e6e6;
+      border: none;
+      padding: 16px 32px;
+      text-decoration: none;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+    .padre {
+  background-color: #27c034;
+  margin: 4px 2px;
+  padding: 1rem;
+  border: 2px solid #27c034;
+  /* IMPORTANTE */
+  text-align: center;
+}
+  </style>
+{% endblock %}
+
+{% block content %}
+<div class="main-content-middle">
+  <div class ="padre">
+    <form action="/subir_archivo" method="POST" enctype="multipart/form-data">
+        <div class = "padre">
+          <input type="file" id="file" name="file" 
+            accept=".txt" required="True"
+            value="Cargar habitación" class="padre">
+        </div>
+        <div class="padre">
+          <input class="input-submit" type="submit" value="Calcular iluminación">
+        </div>
+  </form>
+</div>
+</div>
+
+{% endblock %}

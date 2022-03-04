@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block title %}Habitaciones Grain Chain{% endblock %}
+
+{% block head %}
+  {{ super() }}
+<style>
+    .room-wall {
+        background-color: rgb(12, 11, 11);
+    }
+    .lighted-room {
+        opacity: 0.7;
+    }
+    .fcc-btn {
+    background-color: #e6e6e6;
+    color: rgb(0, 0, 0);
+    padding: 15px 25px;
+    }
+    .padre {
+  background-color: #27c034;
+  margin: 4px 2px;
+  padding: 1rem;
+  border: 2px solid #27c034;
+  /* IMPORTANTE */
+  text-align: center;
+}
+  
+</style>  
+{% endblock %}
+
+{% block content %}
+<div class="main-content-middle">
+
+    <table style="width:100%">
+        {% set n = 0%}
+        {% for row  in matriz %}
+            {% set n =  loop.index -1%}
+            <tr>
+            {% for column  in row %}
+                {% set m = loop.index -1%}
+                {% if column == 1 %}
+                    <td class="room-wall">{{column}}</td>
+                {% else %}
+                    {% set lighted_room = 'lighted-room' %}
+                    {% set room = n|string+","+m|string %}
+                    {% if column == room %}
+                        {% set lighted_room = '' %}
+                        {% set room = 'foco' %}
+                    {% endif %}    
+                    <td 
+                        class="{{lighted_room}}" 
+                        style="background-color: {{ proporcion_color.get(column) }};">{{room}}</td>
+                {% endif %}
+                
+            {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+    <br/>
+
+
+    <div class="padre">
+        <div>
+            <b>Click para ver la solución :</b> 
+        </div> 
+        <p>
+
+        </p>
+        <div>
+        <input class = "fcc-btn" type="button" onclick="location.href='/habitacion?file_name={{file_name}}&proporcion={{max_proporcion}}';" value="Acomodar {{max_proporcion}} focos." /><p>
+        </div>
+        <div>
+        <input class = "fcc-btn" type="button" onclick="location.href='/';" value="Cargar nueva habitación" />
+        </div>
+    </div>
+
+</div>
+{% endblock %}
+{% block footer %}
+
+{% endblock %}
