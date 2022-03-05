@@ -66,6 +66,11 @@ http://localhost:5000
 
 ```
 
+Como PLUS, y para hacerles el trabajo más sencillo, tomé la decisión de subir este proyecto a un servidor, donde podrán acceder a través del siguiente link: 
+```
+https://limitless-sea-46792.herokuapp.com/
+
+```
 Donde nos aparecerá esta pantalla: 
 ![image](https://user-images.githubusercontent.com/37637850/156895336-6a999b8e-6dae-4213-bcc0-e58c93aa79d8.png)
 
@@ -78,6 +83,19 @@ Una vez cargado el archivo, pulsamos sobre el botón calcular iluminación.
 Esta acción nos llevará a la vista de la matríz, donde debemos pulsar sobre el botón "Acomodar N focos"
 donde N es el número de focos por acomodar. 
 ![image](https://user-images.githubusercontent.com/37637850/156895510-cab76232-5d7b-4cca-be24-e73d88888e6d.png)
+
+Una vez pulsado, podremos ver la palabra "FOCO", misma que indíca que en ese lugar debe ir un Foco. 
+Por igual, podemos ver las celdas en amarillo. 
+
+![image](https://user-images.githubusercontent.com/37637850/156895594-3adf8eb8-f5d5-4854-9be6-1d03932fbc45.png)
+
+
+Si deseamos cambiar la matríz, bastará con pulsar el botón cargar nueva habitación, crear un nuevo archivo .txt de matriz (como el ejemplo mostrado anteriormente) cargarlo y repetír el proceso. 
+
+Espero Este proyecto sea de su agrado. 
+
+## GRACIAS POR SU TIEMPO Y ATENCIÓN
+
 
 
  
