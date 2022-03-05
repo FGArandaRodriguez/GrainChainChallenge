@@ -118,21 +118,6 @@
         <main class="main-content">
             {% block content %}{% endblock %}
         </main>        
-        <footer>
-            <div id="footer-content">
-                {% block footer %}
-
-                {% endblock %}
-            </div>
-            <div id="footer-message">
-            {% with messages = get_flashed_messages() %}
-                {% if messages %}
-                  {% for message in messages %}
-                    {{ message }}
-                  {% endfor %}
-                {% endif %}
-            {% endwith %}
-            </div>
-        </footer>
+       
     </body>
 </html>
